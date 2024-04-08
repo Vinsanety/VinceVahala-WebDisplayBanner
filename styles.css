@@ -1,0 +1,234 @@
+/* NOTES:
+    - using rems (1rem = 16px) for accessibility 
+    - 
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dadada;
+}
+
+.accent-color_text {
+  color: pink;
+}
+
+.banner_link-wrapper {
+  text-decoration: none;
+  color: #000;
+}
+
+.banner_container {
+  width: 18.75rem;
+  height: 15.625rem;
+}
+
+/* Animation Section */
+.banner_container > .animation-content_container {
+  height: 60%;
+  width: 100%;
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  position: relative;
+}
+.banner_container > .animation-content_container > .constellation-logo {
+  height: 50%;
+  width: 50%;
+  padding: 1rem;
+  animation: logo-animation 25s;
+}
+@keyframes logo-animation {
+  0% {
+    height: 80%;
+    width: 80%;
+  }
+
+  5% {
+    height: 80%;
+    width: 80%;
+  }
+
+  10% {
+    height: 50%;
+    width: 50%;
+  }
+}
+.banner_container > .animation-content_container > .key-message-copy {
+  visibility: hidden;
+  color: #fff;
+  font-size: 0.875rem;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: 50%;
+  animation: key-copy-animation 25s;
+}
+@keyframes key-copy-animation {
+  0%,
+  50% {
+    opacity: 0;
+    visibility: visible;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.banner_container > .animation-content_container > .slide-right-copy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  animation: slide-right 25s;
+}
+@keyframes slide-right {
+  0%,
+  100% {
+    opacity: 0%;
+    right: 0;
+  }
+  50% {
+    right: 0;
+    opacity: 100%;
+  }
+  70% {
+    right: -10rem;
+    opacity: 0%;
+  }
+}
+.banner_container
+  > .animation-content_container
+  > .slide-right-copy
+  > .top-copy {
+  color: #fff;
+  width: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding-left: 1rem;
+  animation: top-copy-fade-in 25s;
+}
+@keyframes top-copy-fade-in {
+  0%,
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+}
+.banner_container
+  > .animation-content_container
+  > .slide-right-copy
+  > .middle-copy {
+  color: #fff;
+  width: 50%;
+  position: absolute;
+  top: 45%;
+  right: 0.25rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding-left: 1rem;
+  animation: middle-copy-fade-in 25s;
+}
+@keyframes middle-copy-fade-in {
+  0%,
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+}
+.banner_container > .animation-content_container > .call-to-action {
+  color: darkblue;
+  background-color: #fff;
+  font-size: 0.625rem;
+  padding: 0.5rem 2rem;
+  border: 0.25rem solid #bd80b6;
+  border-radius: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  animation: cta-animation 25s;
+}
+@keyframes cta-animation {
+  0%,
+  15% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 1;
+  }
+  70% {
+    left: 1rem;
+  }
+  80%,
+  100% {
+    left: 6rem;
+  }
+}
+.banner_container > .animation-content_container > .persisting-disclaimer {
+  font-size: 0.5rem;
+  color: #fff;
+  margin-left: 1rem;
+  position: absolute;
+  bottom: 0;
+}
+.banner_container > .animation-content_container > .code-for-ad {
+  visibility: hidden;
+  font-size: 0.5rem;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: code-for-ad-animation 25s;
+}
+@keyframes code-for-ad-animation {
+  0%,
+  50% {
+    opacity: 0;
+    visibility: visible;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Scrolling Disclaimer Section */
+.banner_container > .scrolling-disclaimer_container {
+  height: 33%;
+  background-color: white;
+  overflow: scroll;
+}
+
+.banner_container
+  > .scrolling-disclaimer_container
+  > .scrolling-disclaimer_text {
+  margin: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+.banner_container > .scrolling-disclaimer_boxed-warning {
+  height: 7%;
+  background-image: url("assets/background.jpg");
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
