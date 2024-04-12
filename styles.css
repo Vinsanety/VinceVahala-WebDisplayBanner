@@ -212,7 +212,7 @@ body {
 .banner_container > .scrolling-disclaimer_container {
   height: 33%;
   background-color: white;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 .banner_container
